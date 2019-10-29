@@ -1,0 +1,3 @@
+*.pdf
+.stack-work/
+pdfbooklet.cabal
