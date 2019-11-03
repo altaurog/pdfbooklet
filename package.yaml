@@ -7,8 +7,7 @@ maintainer:          "python@aryehleib.com"
 copyright:           "2019 Aryeh Leib Taurog"
 
 extra-source-files:
-- README.md
-- ChangeLog.md
+- README.rst
 
 # Metadata used when publishing your package
 # synopsis:            Short description of your package
@@ -21,7 +20,9 @@ description:         Please see the README on GitHub at <https://github.com/alta
 
 dependencies:
 - base >= 4.7 && < 5
-- HPDF == 1.4.10
+- directory
+- process
+- safe
 
 library:
   source-dirs: src
@@ -39,7 +40,7 @@ executables:
 
 tests:
   pdfbooklet-test:
-    main:                Spec.hs
+    main:                test.hs
     source-dirs:         test
     ghc-options:
     - -threaded
@@ -47,3 +48,6 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - pdfbooklet
+    - HUnit
+    - tasty
+    - tasty-hunit
